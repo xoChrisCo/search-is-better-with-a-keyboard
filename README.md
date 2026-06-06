@@ -74,6 +74,13 @@ chrome-google-keyboard/
 └── README.md
 ```
 
+## An open letter to Google
+
+> Dear Google — why do I need to build this?
+>
+> Sincerely,
+> Chris
+
 ## Privacy
 
 The extension does not collect, store, or transmit any data. It has no permissions beyond running a content script on `https://www.google.com/search*`. No background worker, no remote requests, no telemetry.
