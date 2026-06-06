@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Google Search Keyboard Nav",
+  "version": "1.0.0",
+  "description": "Keyboard navigation for Google search results: Tab/Shift+Tab and Arrow keys jump between results.",
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
