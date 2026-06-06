@@ -7,6 +7,13 @@ A tiny Chrome extension that makes Google search results navigable from the keyb
 - ~50 lines of vanilla JavaScript
 - Only runs on `https://www.google.com/search*`
 
+## An open letter to Google
+
+> Dear Google — why do I need to build this?
+>
+> Sincerely,
+> Chris
+
 ## Install
 
 The extension isn't on the Chrome Web Store — install it locally in developer mode. Takes about 30 seconds.
@@ -73,13 +80,6 @@ chrome-google-keyboard/
 ├── content.js      # The whole extension — keydown listener + focus logic
 └── README.md
 ```
-
-## An open letter to Google
-
-> Dear Google — why do I need to build this?
->
-> Sincerely,
-> Chris
 
 ## Privacy
 
