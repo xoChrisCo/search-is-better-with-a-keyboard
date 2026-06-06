@@ -1,7 +1,31 @@
-const RESULT_SELECTOR = "#rso h3 a";
+const RESULT_SELECTOR = "#search a:has(h3)";
+
+const style = document.createElement("style");
+style.textContent = `
+  #search a:focus,
+  #search a:focus-visible {
+    outline: 3px solid #1a73e8 !important;
+    outline-offset: 2px !important;
+    border-radius: 4px;
+    background-color: rgba(26, 115, 232, 0.08) !important;
+  }
+`;
+document.documentElement.appendChild(style);
+
+function isVisible(el) {
+  if (!el.isConnected) return false;
+  if (el.closest("[inert]")) return false;
+  if (el.offsetParent === null) {
+    const cs = getComputedStyle(el);
+    if (cs.position !== "fixed") return false;
+    if (cs.display === "none" || cs.visibility === "hidden") return false;
+  }
+  const rect = el.getBoundingClientRect();
+  return rect.width > 0 && rect.height > 0;
+}
 
 function getResults() {
-  return Array.from(document.querySelectorAll(RESULT_SELECTOR));
+  return Array.from(document.querySelectorAll(RESULT_SELECTOR)).filter(isVisible);
 }
 
 function focusAt(results, index) {
@@ -24,11 +48,13 @@ document.addEventListener("keydown", (e) => {
   if (key === "Tab" && !e.shiftKey) {
     if (!onResult) {
       e.preventDefault();
+      e.stopImmediatePropagation();
       focusAt(results, 0);
       return;
     }
     if (currentIndex < results.length - 1) {
       e.preventDefault();
+      e.stopImmediatePropagation();
       focusAt(results, currentIndex + 1);
     }
     return;
@@ -37,6 +63,7 @@ document.addEventListener("keydown", (e) => {
   if (key === "Tab" && e.shiftKey) {
     if (onResult && currentIndex > 0) {
       e.preventDefault();
+      e.stopImmediatePropagation();
       focusAt(results, currentIndex - 1);
     }
     return;
@@ -53,4 +80,4 @@ document.addEventListener("keydown", (e) => {
     focusAt(results, Math.max(currentIndex - 1, 0));
     return;
   }
-});
+}, true);
