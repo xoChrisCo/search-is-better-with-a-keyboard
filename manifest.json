@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Search Keyboard Nav",
+  "name": "Search is better with a keyboard",
   "version": "1.1.0",
-  "description": "Keyboard navigation for Google and DuckDuckGo search results: Tab/Shift+Tab and Arrow keys jump between results.",
+  "description": "Tab/Shift+Tab and arrow keys jump between search results on Google and DuckDuckGo. Works in Firefox and Chrome — no mouse required.",
   "browser_specific_settings": {
     "gecko": {
       "id": "search-keyboard-nav@chc.ferd.no",
