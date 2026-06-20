@@ -1,9 +1,16 @@
-const ENGINES = {
-  "www.google.com": { resultSelector: "#search a:has(h3)" },
-  "duckduckgo.com": { resultSelector: 'a[data-testid="result-title-a"]' },
-};
+function detectEngine() {
+  const host = location.hostname;
+  if (host === "duckduckgo.com") {
+    return { resultSelector: 'a[data-testid="result-title-a"]' };
+  }
+  // Matches google.com, google.co.uk, google.no, and any other Google ccTLD.
+  if (/(^|\.)google\.[a-z.]+$/.test(host)) {
+    return { resultSelector: "#search a:has(h3)" };
+  }
+  return null;
+}
 
-const engine = ENGINES[location.hostname];
+const engine = detectEngine();
 
 if (engine) {
   const style = document.createElement("style");
