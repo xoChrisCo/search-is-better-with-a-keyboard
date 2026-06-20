@@ -1,4 +1,4 @@
-# Search is better with a keyboard
+# Search is best with a keyboard
 
 A tiny browser extension that makes Google and DuckDuckGo search results navigable from the keyboard. Press **Tab** on a search results page to jump straight to the first result, then **Tab / Shift+Tab** or **↓ / ↑** to move between results. No mouse needed.
 
@@ -20,7 +20,7 @@ A tiny browser extension that makes Google and DuckDuckGo search results navigab
 
 ### Firefox
 
-Install from [addons.mozilla.org](https://addons.mozilla.org) (search for "Search is better with a keyboard"), or load it temporarily for development:
+Install from [addons.mozilla.org](https://addons.mozilla.org) (search for "Search is best with a keyboard"), or load it temporarily for development:
 
 1. Open `about:debugging#/runtime/this-firefox`.
 2. Click **Load Temporary Add-on…**.
@@ -40,7 +40,7 @@ The extension isn't on the Chrome Web Store — install it locally in developer 
 4. Click **Load unpacked**.
 5. Select the folder you just cloned/unzipped.
 
-That's it — the extension is now active. You should see "Search is better with a keyboard" in your extensions list.
+That's it — the extension is now active. You should see "Search is best with a keyboard" in your extensions list.
 
 ### Try it
 

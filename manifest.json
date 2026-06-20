@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Search is better with a keyboard",
+  "name": "Search is best with a keyboard",
   "version": "1.1.0",
   "description": "Tab/Shift+Tab and arrow keys jump between search results on Google and DuckDuckGo. Works in Firefox and Chrome — no mouse required.",
   "browser_specific_settings": {
